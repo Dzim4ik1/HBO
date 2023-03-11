@@ -1,5 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+:root {
+  --first: #0059C1;
+  --second: #E3B100;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1276px;
+  margin: 0 auto;
+}
+
+.sign_btn {
+  width: 121px;
+  height: 40px;
+  background-color: var(--first);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+header .container {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li:nth-child(1) {
+  margin-right: 46px;
+}
+header nav ul li:nth-child(2) {
+  margin-right: 115px;
+}
+header nav ul li:nth-child(3) {
+  margin-right: 59px;
+}
+header nav ul li a {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+header nav ul li .active {
+  color: #fff;
+}
+
+main .container .hero {
+  height: 595px;
+  background: url(../img/Hero.png) no-repeat center;
+  position: relative;
+}
+main .container .hero .info {
+  max-width: 658px;
+  max-height: 233px;
+  position: absolute;
+  top: 350px;
+  left: 300px;
+}
+main .container .hero .info_text {
+  width: 100%;
+  margin-bottom: 25px;
+}
+main .container .hero .info_loading .info_loading-img1 {
+  position: absolute;
+  left: 80px;
+}
+main .container .hero .info_loading .info_loading-img2 {
+  position: absolute;
+  left: 80px;
+}
+main .container .hero .info_play {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .hero .info_play .btn_play {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+main .container .hero .info_play .btn_play img {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+}
+main .container .hero .info_play p {
+  padding-left: 10px;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+}
+main .container .film_list {
+  margin-top: 34px;
+}
+main .container .film_list h2 {
+  color: white;
+  margin-bottom: 24px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  font-style: normal;
+}
+main .container .film_list .film_card {
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+}
+main .container .film_list .film_card .card {
+  width: 210px;
+  height: 300px;
+  margin-right: 24px;
+}
+main .container .film_list .film_card .card img {
+  border-radius: 12px;
 }

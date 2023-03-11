@@ -1,5 +1,184 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+:root {
+    --first: #0059C1;
+    --second: #E3B100;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 1276px;
+    margin: 0 auto;
+}
+
+.sign_btn {
+    width: 121px;
+    height: 40px;
+    background-color: var(--first);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+header {
+
+    .container {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    nav {
+        ul {
+            display: flex;
+
+            li {
+
+                &:nth-child(1) {
+                    margin-right: 46px;
+                }
+
+                &:nth-child(2) {
+                    margin-right: 115px;
+                }
+
+                &:nth-child(3) {
+                    margin-right: 59px;
+                }
+
+                a {
+                    color: rgba(255, 255, 255, 0.75);
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+
+                .active {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .container {
+        .hero {
+            height: 595px;
+            background: url(../img/Hero.png) no-repeat center;
+            position: relative;
+
+            .info {
+                max-width: 658px;
+                max-height: 233px;
+                position: absolute;
+                top: 350px;
+                left: 300px;
+
+                &_text {
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
+
+                &_loading {
+
+                    .info_loading-img1 {
+                        position: absolute;
+                        left: 80px;
+                    }
+
+                    .info_loading-img2 {
+                        position: absolute;
+                        left: 80px;
+                    }
+                }
+
+                &_play {
+                    padding-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .btn_play {
+                        background: rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(2.5px);
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+
+                        img {
+                            position: absolute;
+                            top: 12px;
+                            left: 16px;
+                        }
+
+                    }
+
+                    p {
+                        padding-left: 10px;
+                        color: white;
+                        font-weight: 400;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+        .film_list {
+            margin-top: 34px;
+            h2 {
+                color: white;
+                margin-bottom: 24px;
+                font-weight: 900;
+font-size: 32px;
+line-height: 38px;
+font-style: normal;
+            }
+            .film_card {
+                display: flex;
+                flex-direction: row;
+                overflow-y: scroll;
+              
+                .card {
+                    width: 210px;
+                    height: 300px;
+                    margin-right: 24px;
+                    img {
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+    }
+
 }
