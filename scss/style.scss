@@ -63,6 +63,10 @@ header {
         align-items: center;
         justify-content: space-between;
 
+        @media only screen and (max-width: 1300px) {
+            padding: 0 30px;
+        }
+
     }
 
     nav {
@@ -88,10 +92,18 @@ header {
                     font-weight: 400;
                     font-size: 13px;
                     line-height: 16px;
+
+                    &:active {
+                        color: #fff;
+                    }
                 }
 
                 .active {
                     color: #fff;
+                }
+
+                @media only screen and (max-width: 1024px) {
+                    margin-right: 15px !important;
                 }
             }
         }
@@ -110,11 +122,17 @@ main {
                 max-height: 233px;
                 position: relative;
                 top: 350px;
-                left: 0px;
                 margin: 0 auto;
+                text-align: center;
 
                 &_text {
                     margin-bottom: 25px;
+
+                    @media only screen and (max-width: 1024px) {
+                        img {
+                            width: 75%;
+                        }
+                    }
                 }
 
                 &_loading {
@@ -123,11 +141,21 @@ main {
                     .info_loading-img1 {
                         position: absolute;
                         left: 80px;
+
+                        @media only screen and (max-width: 1024px) {
+                            width: 65%;
+                            left: 125px;
+                        }
                     }
 
                     .info_loading-img2 {
                         position: absolute;
                         left: 80px;
+
+                        @media only screen and (max-width: 1024px) {
+                            width: 25%;
+                            left: 125px;
+                        }
                     }
                 }
 
@@ -178,6 +206,10 @@ main {
                 font-size: 32px;
                 line-height: 38px;
                 font-style: normal;
+                @media only screen and (max-width: 1300px) {
+                  padding-left: 30px;
+                  text-align: center;
+                }
             }
 
             .film_card {
@@ -189,6 +221,9 @@ main {
                     height: 300px;
                     margin-right: 24px;
                     position: relative;
+                    @media only screen and (max-width: 900px) {
+                       margin: 0 10px;
+                      }
 
                     img {
                         border-radius: 12px;
@@ -320,6 +355,10 @@ main {
                 line-height: 38px;
                 color: #FFFFFF;
                 margin-bottom: 24px;
+                @media only screen and (max-width: 1300px) {
+                    padding-left: 30px;
+                    text-align: center;
+                  }
             }
 
             .card-list {
@@ -330,7 +369,7 @@ main {
                 position: relative;
 
                 .card-sub {
-                    width: 502px;
+                    max-width: 502px;
                     height: 296px;
                     padding: 32px;
                     // background: linear-gradient(90deg, rgba(0, 89, 193, 0.5) 0%, rgba(13, 0, 123, 0.5) 100%);
@@ -341,6 +380,16 @@ main {
                     z-index: 1;
                     opacity: 0.1;
 
+                    @media only screen and (max-width: 600px) {
+                        max-width: 400px;
+                        }
+
+                    @media only screen and (max-width: 1003px) {
+                        background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+                        opacity: 1;
+                        margin: 20px auto;
+                        }
+
                     &:nth-child(3) {
                         position: absolute;
                         top: 0;
@@ -348,6 +397,9 @@ main {
                         z-index: 3;
                         opacity: 1;
                         background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+                        @media only screen and (max-width: 1003px) {
+                           position: initial;
+                           }
                     }
 
                     h2 {
@@ -369,6 +421,9 @@ main {
                         position: absolute;
                         bottom: 12%;
                         right: 10%;
+                        @media only screen and (max-width: 1003px) {
+                            position: initial;
+                            }
 
                         .buy,
                         .trial {
