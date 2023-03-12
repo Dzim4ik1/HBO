@@ -58,6 +58,11 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 1300px) {
+  header .container {
+    padding: 0 30px;
+  }
+}
 header nav ul {
   display: flex;
 }
@@ -76,8 +81,16 @@ header nav ul li a {
   font-size: 13px;
   line-height: 16px;
 }
+header nav ul li a:active {
+  color: #fff;
+}
 header nav ul li .active {
   color: #fff;
+}
+@media only screen and (max-width: 1024px) {
+  header nav ul li {
+    margin-right: 15px !important;
+  }
 }
 
 main .container .hero {
@@ -90,11 +103,16 @@ main .container .hero .info {
   max-height: 233px;
   position: relative;
   top: 350px;
-  left: 0px;
   margin: 0 auto;
+  text-align: center;
 }
 main .container .hero .info_text {
   margin-bottom: 25px;
+}
+@media only screen and (max-width: 1024px) {
+  main .container .hero .info_text img {
+    width: 75%;
+  }
 }
 main .container .hero .info_loading {
   position: relative;
@@ -103,9 +121,21 @@ main .container .hero .info_loading .info_loading-img1 {
   position: absolute;
   left: 80px;
 }
+@media only screen and (max-width: 1024px) {
+  main .container .hero .info_loading .info_loading-img1 {
+    width: 65%;
+    left: 125px;
+  }
+}
 main .container .hero .info_loading .info_loading-img2 {
   position: absolute;
   left: 80px;
+}
+@media only screen and (max-width: 1024px) {
+  main .container .hero .info_loading .info_loading-img2 {
+    width: 25%;
+    left: 125px;
+  }
 }
 main .container .hero .info_play {
   padding-top: 20px;
@@ -147,6 +177,12 @@ main .container .film_list h2 {
   line-height: 38px;
   font-style: normal;
 }
+@media only screen and (max-width: 1300px) {
+  main .container .film_list h2 {
+    padding-left: 30px;
+    text-align: center;
+  }
+}
 main .container .film_list .film_card {
   display: flex;
   flex-direction: row;
@@ -156,6 +192,11 @@ main .container .film_list .film_card .card {
   height: 300px;
   margin-right: 24px;
   position: relative;
+}
+@media only screen and (max-width: 900px) {
+  main .container .film_list .film_card .card {
+    margin: 0 10px;
+  }
 }
 main .container .film_list .film_card .card img {
   border-radius: 12px;
@@ -261,6 +302,12 @@ main .container .subscriptions h2 {
   color: #FFFFFF;
   margin-bottom: 24px;
 }
+@media only screen and (max-width: 1300px) {
+  main .container .subscriptions h2 {
+    padding-left: 30px;
+    text-align: center;
+  }
+}
 main .container .subscriptions .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -269,7 +316,7 @@ main .container .subscriptions .card-list {
   position: relative;
 }
 main .container .subscriptions .card-list .card-sub {
-  width: 502px;
+  max-width: 502px;
   height: 296px;
   padding: 32px;
   background: linear-gradient(90deg, #000000 0%, rgba(13, 0, 123, 0.25) 100%);
@@ -279,6 +326,18 @@ main .container .subscriptions .card-list .card-sub {
   z-index: 1;
   opacity: 0.1;
 }
+@media only screen and (max-width: 600px) {
+  main .container .subscriptions .card-list .card-sub {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 1003px) {
+  main .container .subscriptions .card-list .card-sub {
+    background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+    opacity: 1;
+    margin: 20px auto;
+  }
+}
 main .container .subscriptions .card-list .card-sub:nth-child(3) {
   position: absolute;
   top: 0;
@@ -286,6 +345,11 @@ main .container .subscriptions .card-list .card-sub:nth-child(3) {
   z-index: 3;
   opacity: 1;
   background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+}
+@media only screen and (max-width: 1003px) {
+  main .container .subscriptions .card-list .card-sub:nth-child(3) {
+    position: initial;
+  }
 }
 main .container .subscriptions .card-list .card-sub h2 {
   font-weight: 900;
@@ -302,6 +366,11 @@ main .container .subscriptions .card-list .card-sub_button {
   position: absolute;
   bottom: 12%;
   right: 10%;
+}
+@media only screen and (max-width: 1003px) {
+  main .container .subscriptions .card-list .card-sub_button {
+    position: initial;
+  }
 }
 main .container .subscriptions .card-list .card-sub_button .buy,
 main .container .subscriptions .card-list .card-sub_button .trial {
