@@ -1,42 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-:root {
-  --first: #0059C1;
-  --second: #E3B100;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-li {
-  list-style: none;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-  background-color: #000000;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.container {
-  max-width: 1276px;
-  margin: 0 auto;
-}
-
 .sign_btn {
   width: 121px;
   height: 40px;
-  background-color: var(--first);
+  background-color: #0059C1;
   border: none;
   border-radius: 12px;
   color: #fff;
@@ -46,9 +12,9 @@ body {
   line-height: 18px;
 }
 .sign_btn:hover {
-  background-color: var(--second);
+  background-color: #E3B100;
   transition: all 1.2s;
-  color: black;
+  color: #000;
   transform: scale(1.1);
 }
 
@@ -93,12 +59,12 @@ header nav ul li .active {
   }
 }
 
-main .container .hero {
+.hero .container {
   height: 595px;
-  background: url(../img/Hero.png) no-repeat center;
+  background: url(../../img/Hero.png) no-repeat center;
   position: relative;
 }
-main .container .hero .info {
+.hero .container .info {
   max-width: 658px;
   max-height: 233px;
   position: relative;
@@ -106,44 +72,44 @@ main .container .hero .info {
   margin: 0 auto;
   text-align: center;
 }
-main .container .hero .info_text {
+.hero .container .info_text {
   margin-bottom: 25px;
 }
 @media only screen and (max-width: 1024px) {
-  main .container .hero .info_text img {
+  .hero .container .info_text img {
     width: 75%;
   }
 }
-main .container .hero .info_loading {
+.hero .container .info_loading {
   position: relative;
 }
-main .container .hero .info_loading .info_loading-img1 {
+.hero .container .info_loading .info_loading-img1 {
   position: absolute;
   left: 80px;
 }
 @media only screen and (max-width: 1024px) {
-  main .container .hero .info_loading .info_loading-img1 {
+  .hero .container .info_loading .info_loading-img1 {
     width: 65%;
     left: 125px;
   }
 }
-main .container .hero .info_loading .info_loading-img2 {
+.hero .container .info_loading .info_loading-img2 {
   position: absolute;
   left: 80px;
 }
 @media only screen and (max-width: 1024px) {
-  main .container .hero .info_loading .info_loading-img2 {
+  .hero .container .info_loading .info_loading-img2 {
     width: 25%;
     left: 125px;
   }
 }
-main .container .hero .info_play {
+.hero .container .info_play {
   padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .container .hero .info_play .btn_play {
+.hero .container .info_play .btn_play {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(2.5px);
           backdrop-filter: blur(2.5px);
@@ -151,22 +117,22 @@ main .container .hero .info_play .btn_play {
   height: 40px;
   border-radius: 50%;
 }
-main .container .hero .info_play .btn_play img {
+.hero .container .info_play .btn_play img {
   position: absolute;
   top: 12px;
   left: 16px;
 }
-main .container .hero .info_play .btn_play:hover {
+.hero .container .info_play .btn_play:hover {
   transform: scale(1.3) rotate(1turn);
   transition: all 1.1s;
 }
-main .container .hero .info_play p {
+.hero .container .info_play p {
   padding-left: 10px;
-  color: white;
+  color: #fff;
   font-weight: 400;
   font-size: 15px;
 }
-main .container .hero::before {
+.hero .container::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -174,46 +140,50 @@ main .container .hero::before {
   height: 100px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.19%, #000000 100%);
 }
-main .container .film_list {
-  margin-top: 34px;
+
+.film_list {
+  margin: 43px 0 0 80px;
+  overflow-x: auto;
 }
-main .container .film_list h2 {
-  color: white;
-  margin-bottom: 24px;
+.film_list-title .container h2 {
+  color: #fff;
+  margin: 0 0 24px -40px;
   font-weight: 900;
   font-size: 32px;
   line-height: 38px;
   font-style: normal;
 }
 @media only screen and (max-width: 1003px) {
-  main .container .film_list h2 {
+  .film_list-title .container h2 {
     text-align: center;
   }
 }
 @media only screen and (max-width: 1300px) {
-  main .container .film_list h2 {
+  .film_list-title .container h2 {
     padding-left: 30px;
   }
 }
-main .container .film_list .film_card {
+.film_list .film_card {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-left: 280px;
 }
-main .container .film_list .film_card .card {
+.film_list .film_card .card {
   width: 210px;
-  height: 300px;
+  height: 303px;
   margin-right: 24px;
   position: relative;
 }
 @media only screen and (max-width: 900px) {
-  main .container .film_list .film_card .card {
+  .film_list .film_card .card {
     margin: 0 10px;
   }
 }
-main .container .film_list .film_card .card img {
+.film_list .film_card .card img {
   border-radius: 12px;
 }
-main .container .film_list .film_card .card_info {
+.film_list .film_card .card_info {
   width: 210px;
   height: 300px;
   display: none;
@@ -225,34 +195,34 @@ main .container .film_list .film_card .card_info {
   top: 0;
   padding: 20px;
 }
-main .container .film_list .film_card .card_info-header {
+.film_list .film_card .card_info-header {
   display: flex;
   justify-content: space-between;
 }
-main .container .film_list .film_card .card_info-header .left {
+.film_list .film_card .card_info-header .left {
   display: flex;
-  color: var(--second);
+  color: #E3B100;
 }
-main .container .film_list .film_card .card_info-header .left img {
+.film_list .film_card .card_info-header .left img {
   width: 13px;
   height: 12.7px;
   margin-right: 7px;
 }
-main .container .film_list .film_card .card_info-header .left p {
+.film_list .film_card .card_info-header .left p {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
 }
-main .container .film_list .film_card .card_info-header .right {
+.film_list .film_card .card_info-header .right {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: rgba(255, 255, 255, 0.5);
 }
-main .container .film_list .film_card .card_info-main {
+.film_list .film_card .card_info-main {
   margin-top: 56px;
 }
-main .container .film_list .film_card .card_info-main h2 {
+.film_list .film_card .card_info-main h2 {
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
@@ -260,78 +230,79 @@ main .container .film_list .film_card .card_info-main h2 {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 7px;
 }
-main .container .film_list .film_card .card_info-main h1 {
+.film_list .film_card .card_info-main h1 {
   font-weight: 900;
   font-size: 18px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #fff;
   margin-bottom: 6px;
 }
-main .container .film_list .film_card .card_info-main p {
+.film_list .film_card .card_info-main p {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
   color: #E8E8E8;
 }
-main .container .film_list .film_card .card_info-footer {
+.film_list .film_card .card_info-footer {
   margin-top: 46px;
 }
-main .container .film_list .film_card .card_info-footer .btn-watch {
+.film_list .film_card .card_info-footer .btn-watch {
   width: 170px;
   height: 38px;
-  background-color: var(--first);
+  background-color: #0059C1;
   border: none;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-main .container .film_list .film_card .card_info-footer .btn-watch img {
+.film_list .film_card .card_info-footer .btn-watch img {
   border-radius: 0;
 }
-main .container .film_list .film_card .card_info-footer .btn-watch p {
+.film_list .film_card .card_info-footer .btn-watch p {
   font-weight: 700;
   font-size: 13px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: #fff;
 }
-main .container .film_list .film_card .card_info-footer .btn-watch:hover {
-  background-color: var(--second);
+.film_list .film_card .card_info-footer .btn-watch:hover {
+  background-color: #E3B100;
   transform: scale(1.1);
   transition: ease-out 0.5s;
 }
-main .container .film_list .film_card .card:hover .card_info {
+.film_list .film_card .card:hover .card_info {
   display: block;
   transition: all 1s ease-out;
 }
-main .container .subscriptions {
+
+.subscriptions {
   margin-top: 80px;
 }
-main .container .subscriptions h2 {
+.subscriptions .container h2 {
   font-weight: 900;
   font-size: 32px;
   line-height: 38px;
-  color: #FFFFFF;
+  color: #fff;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 1003px) {
-  main .container .subscriptions h2 {
+  .subscriptions .container h2 {
     text-align: center;
   }
 }
 @media only screen and (max-width: 1300px) {
-  main .container .subscriptions h2 {
+  .subscriptions .container h2 {
     padding-left: 30px;
   }
 }
-main .container .subscriptions .card-list {
+.subscriptions .container .card-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
 }
-main .container .subscriptions .card-list .card-sub {
+.subscriptions .container .card-list .card-sub {
   max-width: 502px;
   height: 296px;
   padding: 32px;
@@ -343,18 +314,18 @@ main .container .subscriptions .card-list .card-sub {
   opacity: 0.1;
 }
 @media only screen and (max-width: 600px) {
-  main .container .subscriptions .card-list .card-sub {
+  .subscriptions .container .card-list .card-sub {
     max-width: 400px;
   }
 }
 @media only screen and (max-width: 1003px) {
-  main .container .subscriptions .card-list .card-sub {
+  .subscriptions .container .card-list .card-sub {
     background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
     opacity: 1;
     margin: 20px auto;
   }
 }
-main .container .subscriptions .card-list .card-sub:nth-child(3) {
+.subscriptions .container .card-list .card-sub:nth-child(3) {
   position: absolute;
   top: 0;
   left: 27%;
@@ -363,33 +334,33 @@ main .container .subscriptions .card-list .card-sub:nth-child(3) {
   background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
 }
 @media only screen and (max-width: 1003px) {
-  main .container .subscriptions .card-list .card-sub:nth-child(3) {
+  .subscriptions .container .card-list .card-sub:nth-child(3) {
     position: initial;
   }
 }
-main .container .subscriptions .card-list .card-sub h2 {
+.subscriptions .container .card-list .card-sub h2 {
   font-weight: 900;
   font-size: 28px;
   line-height: 36px;
   margin-bottom: 16px;
 }
-main .container .subscriptions .card-list .card-sub ul li {
+.subscriptions .container .card-list .card-sub ul li {
   list-style: inside;
   color: #fff;
   margin-bottom: 16px;
 }
-main .container .subscriptions .card-list .card-sub_button {
+.subscriptions .container .card-list .card-sub_button {
   position: absolute;
   bottom: 12%;
   right: 10%;
 }
 @media only screen and (max-width: 1003px) {
-  main .container .subscriptions .card-list .card-sub_button {
+  .subscriptions .container .card-list .card-sub_button {
     position: initial;
   }
 }
-main .container .subscriptions .card-list .card-sub_button .buy,
-main .container .subscriptions .card-list .card-sub_button .trial {
+.subscriptions .container .card-list .card-sub_button .buy,
+.subscriptions .container .card-list .card-sub_button .trial {
   width: 147px;
   height: 40px;
   border-radius: 12px;
@@ -398,25 +369,30 @@ main .container .subscriptions .card-list .card-sub_button .trial {
   font-size: 18px;
   line-height: 22px;
 }
-main .container .subscriptions .card-list .card-sub_button .buy {
-  background-color: var(--second);
+.subscriptions .container .card-list .card-sub_button .buy {
+  background-color: #E3B100;
   border: none;
   margin-right: 10px;
 }
-main .container .subscriptions .card-list .card-sub_button .buy:hover {
+.subscriptions .container .card-list .card-sub_button .buy:hover {
   transform: scale(1.1);
   transition: all 1s;
-  background-color: var(--first);
-  border: 1px solid var(--second);
-  color: var(--second);
+  background-color: #0059C1;
+  border: 1px solid #E3B100;
+  color: #E3B100;
 }
-main .container .subscriptions .card-list .card-sub_button .trial {
+.subscriptions .container .card-list .card-sub_button .trial {
   background-color: transparent;
-  border: 1px solid var(--second);
+  border: 1px solid #E3B100;
 }
-main .container .subscriptions .card-list .card-sub_button .trial:hover {
+.subscriptions .container .card-list .card-sub_button .trial:hover {
   transform: scale(1.1);
   transition: all 1s;
-  background-color: var(--second);
-  border: 1px solid var(--second);
+  background-color: #E3B100;
+  border: 1px solid #E3B100;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
