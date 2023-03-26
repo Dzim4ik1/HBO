@@ -23,6 +23,10 @@ body {
 }
 
 .container {
-  max-width: 1276px;
+  max-width: 1274px;
   margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
