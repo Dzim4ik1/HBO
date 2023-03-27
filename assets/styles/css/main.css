@@ -15,7 +15,7 @@
   background-color: #E3B100;
   transition: all 1.2s;
   color: #000;
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
 .header .container {
@@ -31,6 +31,11 @@
 }
 .header nav ul {
   display: flex;
+}
+@media only screen and (max-width: 625px) {
+  .header nav ul {
+    flex-direction: column;
+  }
 }
 .header nav ul li:nth-child(1) {
   margin-right: 46px;
@@ -84,37 +89,33 @@
   }
 }
 .hero .container .info_loading {
+  max-width: 500px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
   position: relative;
+  margin: 0 auto;
 }
-.hero .container .info_loading .info_loading-img1 {
+.hero .container .info_loading::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background: #E3B100;
   position: absolute;
-  left: 80px;
+  top: 0;
+  left: 0;
 }
 @media only screen and (max-width: 1024px) {
-  .hero .container .info_loading .info_loading-img1 {
-    width: 65%;
-    left: 125px;
-  }
-}
-.hero .container .info_loading .info_loading-img2 {
-  position: absolute;
-  left: 80px;
-}
-@media only screen and (max-width: 1024px) {
-  .hero .container .info_loading .info_loading-img2 {
-    width: 25%;
-    left: 125px;
+  .hero .container .info_loading {
+    max-width: 300px;
   }
 }
 .hero .container .info_play {
-  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: transparent;
   border: none;
-  position: absolute;
-  left: 236px;
+  margin: 20px auto 0;
   cursor: pointer;
 }
 .hero .container .info_play .img_play {
@@ -157,12 +158,7 @@
 }
 
 .film_list-title .container h2 {
-  color: #fff;
   margin: 32px 0 24px 0;
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 38px;
-  font-style: normal;
 }
 @media only screen and (max-width: 1003px) {
   .film_list-title .container h2 {
@@ -179,12 +175,29 @@
   margin-top: 43px;
   overflow-x: auto;
 }
+@media only screen and (min-width: 1400px) {
+  .film_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .film_list .film_card {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 1600px;
   margin-left: 140px;
+}
+@media only screen and (min-width: 320px) {
+  .film_list .film_card {
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .film_list .film_card {
+    margin-left: 345px;
+  }
 }
 .film_list .film_card .card {
   width: 210px;
@@ -284,7 +297,7 @@
 }
 .film_list .film_card .card_info-footer .btn-watch:hover {
   background-color: #E3B100;
-  transform: scale(1.1);
+  transform: scale(1.01);
   transition: ease-out 0.5s;
 }
 .film_list .film_card .card:hover .card_info {
@@ -299,10 +312,6 @@
   padding-bottom: 32px;
 }
 .subscriptions .container h2 {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 38px;
-  color: #fff;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 1003px) {
@@ -358,11 +367,6 @@
     position: initial;
   }
 }
-.subscriptions .container .card-list .card-sub h2 {
-  font-weight: 900;
-  font-size: 29px;
-  line-height: 36px;
-}
 .subscriptions .container .card-list .card-sub ul li {
   list-style: inside;
   color: #fff;
@@ -396,7 +400,7 @@
 .subscriptions .container .card-list .card-sub_button .buy:hover {
   transform: scale(1.1);
   transition: all 1s;
-  background-color: #0059C1;
+  background-color: transparent;
   border: 1px solid #E3B100;
   color: #E3B100;
 }
@@ -409,4 +413,12 @@
   transition: all 1s;
   background-color: #E3B100;
   border: 1px solid #E3B100;
+}
+
+.section_title {
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 36px;
+  color: #fff;
+  font-style: normal;
 }

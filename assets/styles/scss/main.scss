@@ -18,7 +18,7 @@
         background-color: $second;
         transition: all 1.2s;
         color: $black;
-        transform: scale(1.1);
+        transform: scale(1.01);
     }
 }
 
@@ -38,6 +38,9 @@
     nav {
         ul {
             display: flex;
+            @media only screen and (max-width:625px) {
+                flex-direction: column;
+            }
 
             li {
 
@@ -104,38 +107,33 @@
             }
 
             &_loading {
+                max-width: 500px;
+                height: 1px;
+                background: rgba(255, 255, 255, 0.5);
                 position: relative;
-
-                .info_loading-img1 {
+                margin: 0 auto;
+                &::after {
+                    content: '';
+                    width: 100px;
+                    height: 1px;
+                    background: $second;
                     position: absolute;
-                    left: 80px;
+                    top: 0;
+                    left: 0;
 
-                    @media only screen and (max-width: 1024px) {
-                        width: 65%;
-                        left: 125px;
-                    }
                 }
-
-                .info_loading-img2 {
-                    position: absolute;
-                    left: 80px;
-
-                    @media only screen and (max-width: 1024px) {
-                        width: 25%;
-                        left: 125px;
-                    }
+                @media only screen and (max-width: 1024px) {
+                    max-width: 300px;
                 }
             }
 
             &_play {
-                margin-top: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 background: transparent;
                 border: none;
-                position: absolute;
-                left: 236px;
+                margin: 20px auto 0;
                 cursor: pointer;
 
                 .img_play {
@@ -189,12 +187,7 @@
 .film_list-title {
     .container {
         h2 {
-            color: $white;
             margin: 32px 0 24px 0;
-            font-weight: 900;
-            font-size: 32px;
-            line-height: 38px;
-            font-style: normal;
 
             @media only screen and (max-width: 1003px) {
                 text-align: center;
@@ -210,6 +203,11 @@
 .film_list {
     margin-top: 43px;
     overflow-x: auto;
+    @media only screen and (min-width: 1400px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 
     
 
@@ -219,6 +217,15 @@
         justify-content: center;
         width: 1600px;
         margin-left: 140px;
+        @media only screen and (min-width:320px) {
+            margin-left: 30px;
+        }
+
+
+        @media only screen and (min-width: 1400px) {
+            margin-left: 345px;
+        }
+        
        
 
         .card {
@@ -331,7 +338,7 @@
 
                         &:hover {
                             background-color: $second;
-                            transform: scale(1.1);
+                            transform: scale(1.01);
                             transition: ease-out .5s;
 
                         }
@@ -358,10 +365,6 @@
     .container {
         padding-bottom: 32px;
         h2 {
-            font-weight: 900;
-            font-size: 32px;
-            line-height: 38px;
-            color: $white;
             margin-bottom: 24px;
 
             @media only screen and (max-width: 1003px) {
@@ -414,12 +417,6 @@
                     }
                 }
 
-                h2 {
-                    font-weight: 900;
-                    font-size: 29px;
-                    line-height: 36px;
-                }
-
                 ul {
                     li {
                         list-style: inside;
@@ -457,7 +454,7 @@
                         &:hover {
                             transform: scale(1.1);
                             transition: all 1s;
-                            background-color: $first;
+                            background-color: transparent;
                             border: 1px solid $second;
                             color: $second;
                         }
@@ -483,4 +480,11 @@
 
         }
     }
+}
+.section_title {
+    font-weight: 900;
+    font-size: 29px;
+    line-height: 36px;
+    color: $white;
+    font-style: normal;
 }
