@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HBO</title>
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/css/reset.css">
+    <link rel="stylesheet" href="./assets/styles/css/main.css">
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="container">
-            <a href="#" class="logo"><img src="./img/logo.png" alt="HBO"></a>
+            <a href="#" class="logo"><img src="./assets/img/logo.png" alt="HBO"></a>
             <nav>
                 <ul>
                     <li><a href="#" class="active">SERIES</a></li>
@@ -29,31 +29,35 @@
 
 
     </header>
-    <main>
-        <div class="container">
+    <main class="main">
             <section class="hero">
+                <div class="container">
                 <div class="info">
-                    <div class="info_text"><img src="./img/The_Last_of_Us.png" alt="TLoU"></div>
+                    <div class="info_text"><img src="./assets/img/The_Last_of_Us.png" alt="TLoU"></div>
                     <div class="info_loading">
-                        <img class="info_loading-img1" src="./img/Rectangle 10.png">
-                        <img class="info_loading-img2" src="./img/Rectangle 11.png">
                     </div>
-                    <div class="info_play">
-                        <a href="#" class="btn_play"><img src="./img/🔹Icon-Color.png" alt="icon"></a>
+                    <button class="info_play">
+                        <a href="#" class="img_play"><img src="./assets/img/play.png" alt="icon"></a>
                         <p>WATCH THE TRAILER</p>
-                    </div>
+                    </button>
+                </div>
                 </div>
             </section>
-            <section class="film_list swiper">
-                <h2>HBO Original</h2>
-                <div class="film_card swiper-wrapper">
-                    <div class="card swiper-slide"><img src="./img/house-of-dragon.png" alt="film">
+            <section class="film_list-title">
+                    <div class="container">
+                    <h2 class="section_title">HBO Original</h2>
+            </section>
+            <section class="film_list">
+                
+                </div>
+                <div class="film_card">
+                    <div class="card"><img src="./assets/img/house-of-dragon.png" alt="film">
                         <div class="card_info">
                             <div class="card_info-header">
-                                <div class="left"><img src="./img/🔹-Icon-Color.png" alt="star">
+                                <div class="rating"><img src="./assets/img/star.png" alt="star">
                                     <p>8.1</p>
                                 </div>
-                                <div class="right">
+                                <div class="year">
                                     <p>2022</p>
                                 </div>
                             </div>
@@ -63,18 +67,19 @@
                                 <p>An internal succession war within House Targaryen at the height of its power, 172
                                     years before the birth of Daenerys Targaryen.</p>
                             </div>
-                            <div class="card_info-footer"><button class="btn-watch"><img src="./img/🔹Icon-Color.png">
+                            <div class="card_info-footer">
+                                <a class="btn-watch"><img src="./assets/img/play.png">
                                     <p>WATCH</p>
-                                </button></div>
+                                </a></div>
                         </div>
                     </div>
-                    <div class="card swiper-slide"><img src="./img/got.png" alt="film">
+                    <div class="card"><img src="./assets/img/got.png" alt="film">
                         <div class="card_info">
                             <div class="card_info-header">
-                                <div class="left"><img src="./img/🔹-Icon-Color.png" alt="star">
+                                <div class="rating"><img src="./assets/img/star.png" alt="star">
                                     <p>9</p>
                                 </div>
-                                <div class="right">
+                                <div class="year">
                                     <p>2022</p>
                                 </div>
                             </div>
@@ -84,17 +89,18 @@
                                 <p>An internal succession war within House Targaryen at the height of its power, 172
                                     years before the birth of Daenerys Targaryen.</p>
                             </div>
-                            <div class="card_info-footer"><button class="btn-watch"><img src="./img/🔹Icon-Color.png">
+                            <div class="card_info-footer">
+                                <a class="btn-watch"><img src="./assets/img/play.png">
                                     <p>WATCH</p>
-                                </button></div>
+                                </a></div>
                         </div></div>
-                    <div class="card swiper-slide"><img src="./img/true-detectiv.png" alt="film">
+                    <div class="card"><img src="./assets/img/true-detectiv.png" alt="film">
                         <div class="card_info">
                             <div class="card_info-header">
-                                <div class="left"><img src="./img/🔹-Icon-Color.png" alt="star">
+                                <div class="rating"><img src="./assets/img/star.png" alt="star">
                                     <p>8.0</p>
                                 </div>
-                                <div class="right">
+                                <div class="year">
                                     <p>2022</p>
                                 </div>
                             </div>
@@ -104,17 +110,17 @@
                                 <p>An internal succession war within House Targaryen at the height of its power, 172
                                     years before the birth of Daenerys Targaryen.</p>
                             </div>
-                            <div class="card_info-footer"><button class="btn-watch"><img src="./img/🔹Icon-Color.png">
+                            <div class="card_info-footer"><a class="btn-watch"><img src="./assets/img/play.png">
                                     <p>WATCH</p>
-                                </button></div>
+                                </a></div>
                         </div></div>
-                    <div class="card swiper-slide"><img src="./img/sillicon_valley.png" alt="film">
+                    <div class="card"><img src="./assets/img/sillicon_valley.png" alt="film">
                         <div class="card_info">
                             <div class="card_info-header">
-                                <div class="left"><img src="./img/🔹-Icon-Color.png" alt="star">
+                                <div class="rating"><img src="./assets/img/star.png" alt="star">
                                     <p>8.1</p>
                                 </div>
-                                <div class="right">
+                                <div class="year">
                                     <p>2022</p>
                                 </div>
                             </div>
@@ -124,17 +130,17 @@
                                 <p>An internal succession war within House Targaryen at the height of its power, 172
                                     years before the birth of Daenerys Targaryen.</p>
                             </div>
-                            <div class="card_info-footer"><button class="btn-watch"><img src="./img/🔹Icon-Color.png">
+                            <div class="card_info-footer"><a class="btn-watch"><img src="./assets/img/play.png">
                                     <p>WATCH</p>
-                                </button></div>
+                                </a></div>
                         </div></div>
-                    <div class="card swiper-slide"><img src="./img/peacemaker.png" alt="film">
+                    <div class="card"><img src="./assets/img/peacemaker.png" alt="film">
                         <div class="card_info">
                             <div class="card_info-header">
-                                <div class="left"><img src="./img/🔹-Icon-Color.png" alt="star">
+                                <div class="rating"><img src="./assets/img/star.png" alt="star">
                                     <p>7.1</p>
                                 </div>
-                                <div class="right">
+                                <div class="year">
                                     <p>2022</p>
                                 </div>
                             </div>
@@ -144,17 +150,17 @@
                                 <p>An internal succession war within House Targaryen at the height of its power, 172
                                     years before the birth of Daenerys Targaryen.</p>
                             </div>
-                            <div class="card_info-footer"><button class="btn-watch"><img src="./img/🔹Icon-Color.png">
+                            <div class="card_info-footer"><a class="btn-watch"><img src="./assets/img/play.png">
                                     <p>WATCH</p>
-                                </button></div>
+                                </a></div>
                         </div></div>
-                    <div class="card swiper-slide"><img src="./img/house-of-dragon.png" alt="film">
+                    <div class="card"><img src="./assets/img/house-of-dragon.png" alt="film">
                         <div class="card_info">
                             <div class="card_info-header">
-                                <div class="left"><img src="./img/🔹-Icon-Color.png" alt="star">
+                                <div class="rating"><img src="./assets/img/star.png" alt="star">
                                     <p>8.7</p>
                                 </div>
-                                <div class="right">
+                                <div class="year">
                                     <p>2022</p>
                                 </div>
                             </div>
@@ -164,17 +170,17 @@
                                 <p>An internal succession war within House Targaryen at the height of its power, 172
                                     years before the birth of Daenerys Targaryen.</p>
                             </div>
-                            <div class="card_info-footer"><button class="btn-watch"><img src="./img/🔹Icon-Color.png">
+                            <div class="card_info-footer"><a class="btn-watch"><img src="./assets/img/play.png">
                                     <p>WATCH</p>
-                                </button></div>
+                                </a></div>
                         </div></div>
-                    <div class="card swiper-slide"><img src="./img/mare.png" alt="film">
+                    <div class="card"><img src="./assets/img/mare.png" alt="film">
                         <div class="card_info">
                             <div class="card_info-header">
-                                <div class="left"><img src="./img/🔹-Icon-Color.png" alt="star">
+                                <div class="rating"><img src="./assets/img/star.png" alt="star">
                                     <p>6.1</p>
                                 </div>
-                                <div class="right">
+                                <div class="year">
                                     <p>2022</p>
                                 </div>
                             </div>
@@ -184,15 +190,16 @@
                                 <p>An internal succession war within House Targaryen at the height of its power, 172
                                     years before the birth of Daenerys Targaryen.</p>
                             </div>
-                            <div class="card_info-footer"><button class="btn-watch"><img src="./img/🔹Icon-Color.png">
+                            <div class="card_info-footer"><a class="btn-watch"><img src="./assets/img/play.png">
                                     <p>WATCH</p>
-                                </button></div>
+                                </a></div>
                         </div></div>
 
                 </div>
             </section>
             <section class="subscriptions">
-                    <h2>Subscriptions</h2>
+                <div class="container">
+                    <h2  class="section_title">Subscriptions</h2>
                     <div class="card-list">
                         
                         <div class="card-sub">
@@ -233,11 +240,11 @@
                         </div>
                      
                     </div>
+                </div>
             </section>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
