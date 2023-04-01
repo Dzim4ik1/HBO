@@ -494,12 +494,12 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
-  color: #FFFFFF;
+  color: #fff;
 }
 .signUp-cards .card-text p {
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #fff;
   font-weight: 500;
 }
 .signUp-cards .card-btn {
@@ -514,7 +514,7 @@
   font-weight: 900;
   font-size: 18px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #fff;
   border: none;
 }
 .signUp-cards .card-btn .choose_btn:hover {
@@ -554,18 +554,18 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: #FFFFFF;
+  color: #fff;
   text-align: center;
   margin-bottom: 24px;
 }
 .signUp-form__main .form {
-  margin-bottom: 55px;
+  padding-bottom: 55px;
 }
 .signUp-form__main .form input {
   background: transparent;
   border: none;
   border-bottom: 2px solid #D9D9D9;
-  color: #FFFFFF;
+  color: #fff;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -613,7 +613,7 @@
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #fff;
   border: none;
   margin: 32px 0 16px;
 }
@@ -627,7 +627,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  color: #FFFFFF;
+  color: #fff;
 }
 .signUp-form__main .form p a {
   text-decoration: underline;
