@@ -163,7 +163,8 @@ body {
   padding-bottom: 12px;
   margin-bottom: 24px;
 }
-.signUp-form__main .form input.active {
+.signUp-form__main .form input:focus {
+  outline: none;
   border-bottom: 2px solid #E38B00;
 }
 .signUp-form__main .form input[name=firstname] {

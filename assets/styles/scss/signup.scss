@@ -184,8 +184,10 @@ body {
 
                 }
 
-                input.active {
+                input:focus {
+                    outline: none;
                     border-bottom: 2px solid $yellow;
+
                 }
 
                 input[name='firstname'] {
