@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+}
+.container .arrow {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  cursor: pointer;
+}
+.container .arrow:hover {
+  transform: scale(1.1);
+}
+
+.film_list-title {
+  margin-top: 50px;
+}
+.film_list-title h2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.film_list {
+  justify-content: flex-start;
+  margin-top: 24px;
+  position: relative;
+}
+.film_list .film_card {
+  margin-left: 0;
+  justify-content: flex-start;
+}
+
+.footer {
+  margin-top: 56px;
+}
