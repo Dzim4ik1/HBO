@@ -31,20 +31,18 @@
 }
 .header nav ul {
   display: flex;
+  gap: 50px;
 }
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 1024px) {
   .header nav ul {
-    flex-direction: column;
+    gap: 0 15px;
   }
 }
-.header nav ul li:nth-child(1) {
-  margin-right: 46px;
-}
-.header nav ul li:nth-child(2) {
-  margin-right: 115px;
-}
-.header nav ul li:nth-child(3), .header nav ul li:nth-child(4) {
-  margin-right: 59px;
+@media only screen and (max-width: 660px) {
+  .header nav ul {
+    flex-direction: column;
+    gap: 0 5px;
+  }
 }
 .header nav ul li a {
   color: rgba(255, 255, 255, 0.75);
@@ -60,11 +58,6 @@
 }
 .header nav ul li .active {
   color: #fff;
-}
-@media only screen and (max-width: 1024px) {
-  .header nav ul li {
-    margin-right: 15px !important;
-  }
 }
 
 .hero .container {
@@ -455,6 +448,14 @@
   height: 30px;
   display: block;
 }
+.footer .container .footer_support_btn-list li .btn_mail:hover,
+.footer .container .footer_support_btn-list li .btn_tel:hover,
+.footer .container .footer_support_btn-list li .btn_write:hover {
+  background-color: #E3B100;
+  transition: all 1.2s;
+  color: #000;
+  transform: scale(1.01);
+}
 .footer .container .footer_support_btn-list li .btn_write {
   width: 142px;
   text-align: center;
@@ -489,6 +490,14 @@
 .footer .container .footer_links-top .list-top li a,
 .footer .container .footer_links-top .list-bottom li a {
   color: #707070;
+}
+.footer .container .footer_links-top .list-top li a:hover,
+.footer .container .footer_links-top .list-bottom li a:hover {
+  color: #fff;
+}
+.footer .container .footer_links-top .list-top li a:active,
+.footer .container .footer_links-top .list-bottom li a:active {
+  color: #fff;
 }
 .footer .container .footer_links-top .list-top li:active,
 .footer .container .footer_links-top .list-bottom li:active {
