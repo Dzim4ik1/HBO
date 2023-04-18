@@ -248,3 +248,7 @@ body {
 input:-internal-autofill-selected {
   background-color: transparent;
 }
+
+.footer {
+  margin-top: 100px;
+}
