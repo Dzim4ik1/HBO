@@ -12,7 +12,7 @@
 }
 
 .film_list-title {
-    margin-top: 50px;
+    margin-top: 20px;
     h2 {
         font-family: 'Lato';
 font-style: normal;
@@ -22,7 +22,12 @@ line-height: 38px;
     }
     
 }
-
+.movies-sec {
+	margin-top: 50px;
+}
+.cartoons-sec {
+	margin-top: 46px;
+}
 .film_list {
     justify-content: flex-start;
     margin-top: 24px;
@@ -33,5 +38,5 @@ line-height: 38px;
     }
 }
 .footer {
-    margin-top: 56px;
+    margin-top: 10px;
 }
