@@ -1,0 +1,46 @@
+.container {
+	position: relative;
+
+	.arrow {
+		position: absolute;
+		top: 50%;
+		right: -40px;
+		cursor: pointer;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.film_list-title {
+	margin-top: 20px;
+
+	h2 {
+		font-family: 'Lato';
+		font-style: normal;
+		font-weight: 900;
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+}
+
+.movies-sec {
+	margin-top: 50px;
+}
+
+.cartoons-sec {
+	margin-top: 46px;
+}
+
+.film_list {
+	justify-content: flex-start;
+	margin-top: 24px;
+	position: relative;
+
+	.film_card {
+		margin-left: 0;
+		justify-content: flex-start;
+	}
+}

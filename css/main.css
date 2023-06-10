@@ -1,4 +1,42 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul, li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #fff;
+}
+
+.container {
+  max-width: 1274px;
+  margin: 0 auto;
+}
+
 .sign_btn {
   width: 121px;
   height: 40px;
@@ -44,6 +82,9 @@
     gap: 0 5px;
   }
 }
+.header nav ul li:nth-child(2) {
+  margin-right: 115px;
+}
 .header nav ul li a {
   color: rgba(255, 255, 255, 0.75);
   font-weight: 400;
@@ -62,7 +103,7 @@
 
 .hero .container {
   height: 595px;
-  background: url(../../img/Hero.png) no-repeat center;
+  background: url(../../assets/img/Main-slider-img/TheLastOfUs.png) no-repeat center;
   position: relative;
 }
 .hero .container .info {
@@ -166,13 +207,9 @@
 .film_list {
   margin-top: 43px;
   overflow-x: auto;
-}
-@media only screen and (min-width: 1400px) {
-  .film_list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .film_list .film_card {
   display: flex;
@@ -297,118 +334,8 @@
   transition: all 1s ease-out;
 }
 
-.subscriptions {
-  margin-top: 80px;
-}
-.subscriptions .container {
-  padding-bottom: 32px;
-}
-.subscriptions .container h2 {
-  margin-bottom: 24px;
-}
-@media only screen and (max-width: 1003px) {
-  .subscriptions .container h2 {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 1300px) {
-  .subscriptions .container h2 {
-    padding-left: 30px;
-  }
-}
-.subscriptions .container .card-list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-}
-.subscriptions .container .card-list .card-sub {
-  width: 502px;
-  height: 296px;
-  padding: 32px;
-  background: linear-gradient(90deg, rgba(0, 89, 193, 0.5) 0%, rgba(13, 0, 123, 0.5) 100%);
-  border: 1px solid rgba(0, 89, 193, 0.5);
-  border-radius: 12px;
-  position: relative;
-  z-index: 1;
-  opacity: 0.1;
-}
-@media only screen and (max-width: 600px) {
-  .subscriptions .container .card-list .card-sub {
-    max-width: 400px;
-  }
-}
-@media only screen and (max-width: 1003px) {
-  .subscriptions .container .card-list .card-sub {
-    background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
-    opacity: 1;
-    margin: 20px auto;
-  }
-}
-.subscriptions .container .card-list .card-sub:nth-child(3) {
-  position: absolute;
-  top: 0;
-  left: 27%;
-  z-index: 3;
-  opacity: 1;
-  background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
-}
-@media only screen and (max-width: 1003px) {
-  .subscriptions .container .card-list .card-sub:nth-child(3) {
-    position: initial;
-  }
-}
-.subscriptions .container .card-list .card-sub ul li {
-  list-style: inside;
-  color: #fff;
-  margin-bottom: 16px;
-}
-.subscriptions .container .card-list .card-sub_button {
-  position: absolute;
-  bottom: 12%;
-  right: 8%;
-}
-@media only screen and (max-width: 1003px) {
-  .subscriptions .container .card-list .card-sub_button {
-    position: initial;
-  }
-}
-.subscriptions .container .card-list .card-sub_button .buy,
-.subscriptions .container .card-list .card-sub_button .trial {
-  width: 147px;
-  height: 40px;
-  border-radius: 12px;
-  color: #fff;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 22px;
-}
-.subscriptions .container .card-list .card-sub_button .buy {
-  background-color: #E3B100;
-  border: none;
-  margin-right: 10px;
-}
-.subscriptions .container .card-list .card-sub_button .buy:hover {
-  transform: scale(1.1);
-  transition: all 1s;
-  background-color: transparent;
-  border: 1px solid #E3B100;
-  color: #E3B100;
-}
-.subscriptions .container .card-list .card-sub_button .trial {
-  background-color: transparent;
-  border: 1px solid #E3B100;
-}
-.subscriptions .container .card-list .card-sub_button .trial:hover {
-  transform: scale(1.1);
-  transition: all 1s;
-  background-color: #E3B100;
-  border: 1px solid #E3B100;
-}
-
 .footer {
-  background: url(../../img/footer-BG.png) no-repeat center;
+  background: url(../../assets/img/footer-BG.png) no-repeat center;
 }
 .footer .container {
   display: flex;
@@ -539,6 +466,9 @@
   align-content: center;
   flex-direction: column;
 }
+.footer .container .footer_links-bottom a {
+  margin-bottom: 16px;
+}
 .footer .container .footer_links-bottom a img {
   width: 63px;
   height: 26px;
@@ -556,4 +486,409 @@
   font-weight: 700;
   font-size: 12px;
   margin-bottom: 13px;
+}
+
+.body.signUpPage-body {
+  background-image: url(../../assets/img/bg-signup.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.section_title {
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 36px;
+  color: #fff;
+  font-style: normal;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signUp-title {
+  margin-top: 20px;
+}
+.signUp-title h1 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.signUp-title h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.signUp-cards {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 1110px) {
+  .signUp-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.signUp-cards .card {
+  width: 502px;
+  height: 250px;
+  border-radius: 12px;
+  position: relative;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1110px) {
+  .signUp-cards .card {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .signUp-cards .card {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .signUp-cards .card {
+    width: 300px;
+  }
+}
+.signUp-cards .card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.signUp-cards .card-heading__tariff h2 {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+.signUp-cards .card-heading__price p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+}
+.signUp-cards .card-text p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: 500;
+}
+.signUp-cards .card-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.signUp-cards .card-btn .choose_btn {
+  width: 93px;
+  height: 40px;
+  background: #E38B00;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  border: none;
+}
+.signUp-cards .card-btn .choose_btn:hover {
+  transform: scale(1.1);
+  color: #D9D9D9;
+  transition: all 1s;
+}
+.signUp-cards .card:first-child {
+  background: linear-gradient(90deg, rgba(0, 89, 193, 0.5) 0%, rgba(13, 0, 123, 0.5) 100%);
+  margin-right: 35px;
+}
+@media only screen and (max-width: 1110px) {
+  .signUp-cards .card:first-child {
+    margin-right: 0;
+  }
+}
+.signUp-cards .card:last-child {
+  background: linear-gradient(90deg, rgba(0, 89, 193, 0.5) 0%, rgba(13, 0, 123, 0.5) 100%);
+  border: 1px solid rgba(0, 89, 193, 0.5);
+}
+.signUp-cards .card:last-child .ok {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+.signUp-form {
+  max-width: 733px;
+  height: 316px;
+  margin-top: 32px;
+}
+@media only screen and (max-width: 760px) {
+  .signUp-form {
+    padding: 0 30px;
+  }
+}
+.signUp-form__heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.signUp-form__main .form {
+  padding-bottom: 55px;
+}
+.signUp-form__main .form input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #D9D9D9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+.signUp-form__main .form input:focus {
+  outline: none;
+  border-bottom: 2px solid #E38B00;
+}
+.signUp-form__main .form input[name=firstname] {
+  width: 350px;
+  margin-right: 29px;
+}
+.signUp-form__main .form input[name=lastname] {
+  width: 350px;
+}
+.signUp-form__main .form input[name=email] {
+  width: 100%;
+}
+.signUp-form__main .form input[name=password] {
+  width: 100%;
+}
+.signUp-form__main .form .checkbox {
+  display: flex;
+  align-items: center;
+}
+.signUp-form__main .form .checkbox .custom-checkbox {
+  box-sizing: content-box;
+  background: transparent;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  margin-right: 15px;
+  padding: 2px 4px;
+  height: 17px;
+  width: 17px;
+  position: relative;
+}
+.signUp-form__main .form .checkbox .custom-checkbox.checked {
+  background: #0059C1;
+}
+.signUp-form__main .form .checkbox .custom-checkbox.checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  top: -1px;
+  left: 4px;
+}
+.signUp-form__main .form .checkbox p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.signUp-form__main .form .create-btn {
+  width: 100%;
+  height: 40px;
+  background: #0059C1;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+  border: none;
+  margin: 32px 0 16px;
+}
+.signUp-form__main .form .create-btn:hover {
+  background-color: #E3B100;
+  transition: all 1.2s;
+  color: #000;
+  transform: scale(1.01);
+}
+.signUp-form__main .form p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+}
+.signUp-form__main .form p a {
+  text-decoration: underline;
+  color: #E38B00;
+}
+@media only screen and (max-width: 760px) {
+  .signUp-form__main .form input[name=firstname], .signUp-form__main .form input[name=lastname] {
+    width: 100%;
+  }
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+.footer.signUpPage-footer {
+  margin-top: 100px;
+}
+
+.subscriptions {
+  margin-top: 80px;
+}
+.subscriptions .container {
+  padding-bottom: 32px;
+}
+.subscriptions .container h2 {
+  margin-bottom: 24px;
+}
+@media only screen and (max-width: 1003px) {
+  .subscriptions .container h2 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .subscriptions .container h2 {
+    padding-left: 30px;
+  }
+}
+.subscriptions .container .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.subscriptions .container .card-list .card-sub {
+  width: 502px;
+  height: 296px;
+  padding: 32px;
+  background: linear-gradient(90deg, rgba(0, 89, 193, 0.5) 0%, rgba(13, 0, 123, 0.5) 100%);
+  border: 1px solid rgba(0, 89, 193, 0.5);
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  opacity: 0.1;
+}
+@media only screen and (max-width: 600px) {
+  .subscriptions .container .card-list .card-sub {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 1003px) {
+  .subscriptions .container .card-list .card-sub {
+    background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+    opacity: 1;
+    margin: 20px auto;
+  }
+}
+.subscriptions .container .card-list .card-sub:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  z-index: 3;
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+}
+@media only screen and (max-width: 1003px) {
+  .subscriptions .container .card-list .card-sub:nth-child(3) {
+    position: initial;
+  }
+}
+.subscriptions .container .card-list .card-sub ul li {
+  list-style: inside;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.subscriptions .container .card-list .card-sub_button {
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+}
+@media only screen and (max-width: 1003px) {
+  .subscriptions .container .card-list .card-sub_button {
+    position: initial;
+  }
+}
+.subscriptions .container .card-list .card-sub_button .buy,
+.subscriptions .container .card-list .card-sub_button .trial {
+  width: 147px;
+  height: 40px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+}
+.subscriptions .container .card-list .card-sub_button .buy {
+  background-color: #E3B100;
+  border: none;
+  margin-right: 10px;
+}
+.subscriptions .container .card-list .card-sub_button .buy:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+  background-color: transparent;
+  border: 1px solid #E3B100;
+  color: #E3B100;
+}
+.subscriptions .container .card-list .card-sub_button .trial {
+  background-color: transparent;
+  border: 1px solid #E3B100;
+}
+.subscriptions .container .card-list .card-sub_button .trial:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+  background-color: #E3B100;
+  border: 1px solid #E3B100;
+}
+
+.container {
+  position: relative;
+}
+.container .arrow {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  cursor: pointer;
+}
+.container .arrow:hover {
+  transform: scale(1.1);
+}
+
+.film_list-title {
+  margin-top: 20px;
+}
+.film_list-title h2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.movies-sec {
+  margin-top: 50px;
+}
+
+.cartoons-sec {
+  margin-top: 46px;
+}
+
+.film_list {
+  justify-content: flex-start;
+  margin-top: 24px;
+  position: relative;
+}
+.film_list .film_card {
+  margin-left: 0;
+  justify-content: flex-start;
 }

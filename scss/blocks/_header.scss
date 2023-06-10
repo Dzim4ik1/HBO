@@ -1,0 +1,56 @@
+.header {
+	.container {
+		height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media only screen and (max-width: 1300px) {
+			padding: 0 30px;
+		}
+
+	}
+
+	nav {
+		ul {
+			display: flex;
+			gap: 50px;
+
+			@media only screen and (max-width: 1024px) {
+				gap: 0 15px;
+
+			}
+
+			@media only screen and (max-width:660px) {
+				flex-direction: column;
+				gap: 0 5px;
+			}
+
+			li {
+				&:nth-child(2) {
+					margin-right: 115px;
+				}
+
+				a {
+					color: rgba(255, 255, 255, 0.75);
+					font-weight: 400;
+					font-size: 13px;
+					line-height: 16px;
+
+					&:hover {
+						color: $white;
+					}
+
+					&:active {
+						color: $white;
+					}
+				}
+
+				.active {
+					color: $white;
+				}
+
+			}
+		}
+	}
+}

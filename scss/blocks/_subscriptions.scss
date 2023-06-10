@@ -1,0 +1,123 @@
+.subscriptions {
+	margin-top: 80px;
+
+	.container {
+			padding-bottom: 32px;
+
+			h2 {
+					margin-bottom: 24px;
+
+					@media only screen and (max-width: 1003px) {
+							text-align: center;
+					}
+
+					@media only screen and (max-width: 1300px) {
+							padding-left: 30px;
+					}
+			}
+
+			.card-list {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					justify-content: space-between;
+					position: relative;
+
+					.card-sub {
+							width: 502px;
+							height: 296px;
+							padding: 32px;
+							background: linear-gradient(90deg, rgba(0, 89, 193, 0.5) 0%, rgba(13, 0, 123, 0.5) 100%);
+							border: 1px solid rgba(0, 89, 193, 0.5);
+							border-radius: 12px;
+							position: relative;
+							z-index: 1;
+							opacity: 0.1;
+
+							@media only screen and (max-width: 600px) {
+									max-width: 400px;
+							}
+
+							@media only screen and (max-width: 1003px) {
+									background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+									opacity: 1;
+									margin: 20px auto;
+							}
+
+							&:nth-child(3) {
+									position: absolute;
+									top: 0;
+									left: 27%;
+									z-index: 3;
+									opacity: 1;
+									background: linear-gradient(90deg, rgba(0, 89, 193, 0.8) 0%, rgba(13, 0, 123, 0.9) 100%);
+
+									@media only screen and (max-width: 1003px) {
+											position: initial;
+									}
+							}
+
+							ul {
+									li {
+											list-style: inside;
+											color: $white;
+											margin-bottom: 16px;
+									}
+							}
+
+							&_button {
+									position: absolute;
+									bottom: 12%;
+									right: 8%;
+
+									@media only screen and (max-width: 1003px) {
+											position: initial;
+									}
+
+									.buy,
+									.trial {
+											width: 147px;
+											height: 40px;
+											border-radius: 12px;
+											color: $white;
+											font-weight: 900;
+											font-size: 18px;
+											line-height: 22px;
+
+									}
+
+									.buy {
+											background-color: $second;
+											border: none;
+											margin-right: 10px;
+
+											&:hover {
+													transform: scale(1.1);
+													transition: all 1s;
+													background-color: transparent;
+													border: 1px solid $second;
+													color: $second;
+											}
+									}
+
+									.trial {
+											background-color: transparent;
+											border: 1px solid $second;
+
+											&:hover {
+													transform: scale(1.1);
+													transition: all 1s;
+													background-color: $second;
+													border: 1px solid $second;
+
+											}
+
+									}
+							}
+
+
+					}
+
+			}
+	}
+}

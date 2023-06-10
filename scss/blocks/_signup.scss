@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-@import '../scss/colors';
-
-body {
-    background-image: url(../../img/bg-signup.png);
+.body.signUpPage-body{
+    background-image: url(../../assets/img/bg-signup.png);
     background-position: top;
     background-repeat: no-repeat;
 }
@@ -295,6 +292,6 @@ input:-internal-autofill-selected {
     background-color: transparent;
 }
 
-.footer {
+.footer.signUpPage-footer {
     margin-top: 100px;
 }
