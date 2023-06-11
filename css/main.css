@@ -57,6 +57,14 @@ h1, h2, h3, h4, h5 {
   transform: scale(1.01);
 }
 
+@media only screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    z-index: 999;
+    width: 100vh;
+    background-color: black;
+  }
+}
 .header .container {
   height: 90px;
   display: flex;
@@ -68,40 +76,98 @@ h1, h2, h3, h4, h5 {
     padding: 0 30px;
   }
 }
-.header nav ul {
+
+nav ul {
   display: flex;
   gap: 50px;
 }
 @media only screen and (max-width: 1024px) {
-  .header nav ul {
+  nav ul {
     gap: 0 15px;
   }
 }
 @media only screen and (max-width: 660px) {
-  .header nav ul {
+  nav ul {
     flex-direction: column;
     gap: 0 5px;
   }
 }
-.header nav ul li:nth-child(2) {
+nav ul li:nth-child(2) {
   margin-right: 115px;
 }
-.header nav ul li a {
+nav ul li a {
   color: rgba(255, 255, 255, 0.75);
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
 }
-.header nav ul li a:hover {
+nav ul li a:hover {
   color: #fff;
 }
-.header nav ul li a:active {
+nav ul li a:active {
   color: #fff;
 }
-.header nav ul li .active {
+nav ul li .active {
   color: #fff;
 }
 
+.menu {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+.menu.active {
+  position: fixed;
+  transform: translateY(140px);
+  background-color: #000;
+  z-index: 999;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0 30px;
+}
+@media only screen and (min-width: 768px) {
+  .menu.active {
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .menu {
+    transform: translateY(-200px);
+    transition: transform 0.5s;
+  }
+  .menu nav ul {
+    flex-direction: column;
+  }
+  .menu nav ul li {
+    margin-bottom: 8px;
+  }
+  .menu nav ul li a {
+    font-size: 24px;
+  }
+}
+
+.burger-menu {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .burger-menu {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    padding-top: 90px;
+  }
+}
 .hero .container {
   height: 595px;
   background: url(../../assets/img/Main-slider-img/TheLastOfUs.png) no-repeat center;
@@ -741,6 +807,7 @@ h1, h2, h3, h4, h5 {
   height: 17px;
   width: 17px;
   position: relative;
+  cursor: pointer;
 }
 .signUp-form__main .form .checkbox .custom-checkbox.checked {
   background: #0059C1;
@@ -769,6 +836,7 @@ h1, h2, h3, h4, h5 {
   color: #fff;
   border: none;
   margin: 32px 0 16px;
+  cursor: pointer;
 }
 .signUp-form__main .form .create-btn:hover {
   background-color: #E3B100;

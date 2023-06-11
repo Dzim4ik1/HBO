@@ -1,4 +1,7 @@
 .hero {
+	@media only screen and (max-width:767px) {
+		padding-top: 90px;
+	}
 	.container {
 			height: 595px;
 			background: url(../../assets/img/Main-slider-img/TheLastOfUs.png) no-repeat center;
