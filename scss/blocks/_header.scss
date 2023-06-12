@@ -21,6 +21,8 @@
 }
 
 nav {
+		display: flex;
+    align-items: center;
 	ul {
 		display: flex;
 		gap: 50px;
@@ -36,9 +38,9 @@ nav {
 		}
 
 		li {
-			&:nth-child(2) {
-				margin-right: 115px;
-			}
+			//&:nth-child(2) {
+			//	margin-right: 115px;
+			//}
 
 			a {
 				color: rgba(255, 255, 255, 0.75);
