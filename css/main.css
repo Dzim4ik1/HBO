@@ -170,7 +170,7 @@ nav ul li .active {
 }
 .hero .container {
   height: 595px;
-  background: url(../../assets/img/Main-slider-img/TheLastOfUs.png) no-repeat center;
+  background: url(../../assets/img/Main-slider-img/1.png) no-repeat center;
   position: relative;
 }
 .hero .container .info {
@@ -197,12 +197,12 @@ nav ul li .active {
   margin: 0 auto;
 }
 .hero .container .info_loading .load {
-  width: 100px;
   height: 1px;
   background: #E3B100;
   position: absolute;
   top: 0;
   left: 0;
+  animation: loadingSlider 12s infinite;
 }
 @media only screen and (max-width: 1024px) {
   .hero .container .info_loading {
@@ -257,6 +257,20 @@ nav ul li .active {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.19%, #000000 100%);
 }
 
+@keyframes loadingSlider {
+  0% {
+    width: 0%;
+  }
+  33% {
+    width: 33.3%;
+  }
+  66% {
+    width: 66.6%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .film_list-title .container h2 {
   margin: 32px 0 24px 0;
 }
