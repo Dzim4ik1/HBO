@@ -17,7 +17,10 @@
 
 					&_text {
 							margin-bottom: 25px;
-
+							img {
+								max-height: 90px;
+								object-fit: scale-down;						
+							}
 							@media only screen and (max-width: 1024px) {
 									img {
 											width: 75%;

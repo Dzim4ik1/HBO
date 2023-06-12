@@ -184,6 +184,11 @@ nav ul li .active {
 .hero .container .info_text {
   margin-bottom: 25px;
 }
+.hero .container .info_text img {
+  max-height: 90px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
 @media only screen and (max-width: 1024px) {
   .hero .container .info_text img {
     width: 75%;
