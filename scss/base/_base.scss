@@ -1,0 +1,72 @@
+// main font
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: $black;
+	overflow-x: hidden;
+	position: relative;
+}
+
+h1,h2,h3,h4,h5 {
+	color: $white;
+}
+
+.container {
+	max-width: 1274px;
+	margin: 0 auto;
+}
+
+.sign_btn {
+	width: 121px;
+	height: 40px;
+	background-color: $first;
+	border: none;
+	border-radius: 12px;
+	color: $white;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	cursor: pointer;
+
+	&:hover {
+			background-color: $second;
+			transition: all 1.2s;
+			color: $black;
+			transform: scale(1.01);
+	}
+}
+
+
+.scrolltoTop {
+	visibility: hidden;
+}
+.scrolltoTop.active {
+	visibility: visible;
+		width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 35px;
+		cursor: pointer;
+    background: $first;
+		opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+    position: fixed;
+    top: 90%;
+    right: 7%;
+		z-index: 1000;
+		&::after {
+			content: '\21E7';
+		}
+		&:hover {
+			opacity: 1;
+			
+		}
+}
