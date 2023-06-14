@@ -6,6 +6,9 @@
 			height: 595px;
 			background: url(../../assets/img/Main-slider-img/1.png) no-repeat center;
 			position: relative;
+			@media only screen and (max-width:767px) {
+				margin: 0 auto;
+			}
 
 			.info {
 					max-width: 658px;
