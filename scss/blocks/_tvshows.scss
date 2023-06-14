@@ -1,6 +1,6 @@
 .container {
 	position: relative;
-	@media only screen and (max-width: 767px) {
+	@media only screen and (max-width: 1340px) {
 		margin: auto 11px;
 	}
 
@@ -9,6 +9,10 @@
 		top: 50%;
 		right: -40px;
 		cursor: pointer;
+		@media only screen and (max-width: 1370px) {
+			display: none;
+		}
+
 
 		&:hover {
 			transform: scale(1.1);
@@ -28,7 +32,7 @@
 		@media only screen and (max-width: 767px) {
 			font-size: 24px;
 			line-height: 29px;
-			}
+		}
 	}
 
 }
