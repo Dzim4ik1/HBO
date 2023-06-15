@@ -72,8 +72,8 @@ function filmSlider() {
     if (index === 4) {
       index = 1;
     }
-    filmImg.style.backgroundImage = `url(../../../assets/img/Main-slider-img/${index}.png)`;
-    filmTitle.src = `../../../assets/img/Main-slider-img/Group${index}.png`;
+    filmImg.style.backgroundImage = `url(./assets/img/Main-slider-img/${index}.png)`;
+    filmTitle.src = `./assets/img/Main-slider-img/Group${index}.png`;
   }, 4000);
 }
 filmSlider();
