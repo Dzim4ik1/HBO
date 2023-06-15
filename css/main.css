@@ -201,7 +201,7 @@ nav ul li .active {
 }
 .hero .container {
   height: 595px;
-  background: url(../../assets/img/Main-slider-img/1.png) no-repeat center;
+  background: url(./assets/img/Main-slider-img/1.png) no-repeat center;
   position: relative;
 }
 @media only screen and (max-width: 1340px) {
@@ -431,6 +431,7 @@ nav ul li .active {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  cursor: pointer;
 }
 .film_list .film_card .card_info-footer .btn-watch img {
   border-radius: 0;
@@ -828,6 +829,7 @@ nav ul li .active {
   font-weight: 900;
   font-size: 18px;
   line-height: 22px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
   .subscriptions .container .card-list .card-sub_button .buy,
@@ -959,7 +961,7 @@ nav ul li .active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(../../assets/img/bg-signup.png);
+  background-image: url(./assets/img/bg-signup.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
