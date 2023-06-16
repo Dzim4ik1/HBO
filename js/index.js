@@ -1,3 +1,5 @@
+import { data  } from "./data.js";
+
 // custom checkbox
 const checkbox = document.querySelector(".custom-checkbox");
 
@@ -104,4 +106,55 @@ links.forEach((link) => {
   link.addEventListener("click", handlelink);
 });
 
-//
+// get movie info
+
+
+
+
+const getMovieType = (arr, type) => {
+	const typeMovie = arr.filter(movie => movie.type === type);
+	return typeMovie;
+}
+
+
+const getTemplate = (arr) => {
+	const filmListCartoon = document.querySelector('.film_card-cartoons');
+	const filmListMovie = document.querySelector('.film_card-movies');
+	const filmListshow = document.querySelector('.film_card-shows');
+
+	arr.forEach(element => {
+		const showItem =
+		`
+									<div class="card">
+									<img class="card-img" src="${element.image}" alt="${element.title}">
+										<div class="card_info">
+											<div class="card_info-header">
+												<div class="rating"><img src="./assets/img/star.png" alt="star">
+													<p>${element.rating}</p>
+												</div>
+												<div class="year">
+													<p>${element.year}</p>
+												</div>
+											</div>
+											<div class="card_info-main">
+												<h1>${element.title}</h1>
+												<p>${element.description}</p>
+											</div>
+											<div class="card_info-footer">
+												<a class="btn-watch"><img src="./assets/img/play.png">
+													<p>WATCH</p>
+												</a>
+											</div>
+										</div>
+									</div>
+			`
+			element.type === 'movie' ? filmListMovie.insertAdjacentHTML('beforeend', showItem) : false
+		  element.type === 'show' ? filmListshow.insertAdjacentHTML('beforeend', showItem) : false
+			element.type === 'cartoon' ? filmListCartoon.insertAdjacentHTML('beforeend', showItem) : false
+		
+})	
+}
+
+getTemplate(getMovieType(data, 'show'))
+getTemplate(getMovieType(data, 'cartoon'))
+getTemplate(getMovieType(data, 'movie'))
