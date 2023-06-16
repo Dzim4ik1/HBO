@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     rank: 1,
     title: "The Shawshank Redemption",
