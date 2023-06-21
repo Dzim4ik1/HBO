@@ -14,11 +14,7 @@
 			}
 
 			h2 {
-					margin-bottom: 24px;
-					font-weight: 900;
-    			font-size: 32px;
-    			line-height: 38px;
-					text-align: start;
+					@include sectionTitle;
 
 					@media only screen and (max-width: 1300px) {
 							padding-left: 30px;

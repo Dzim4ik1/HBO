@@ -50,6 +50,12 @@ h1, h2, h3, h4, h5 {
   line-height: 18px;
   cursor: pointer;
 }
+@media only screen and (max-width: 767px) {
+  .sign_btn {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+}
 .sign_btn:hover {
   background-color: #E3B100;
   transition: all 1.2s;
@@ -155,13 +161,13 @@ nav ul li .active {
 .menu.active {
   position: fixed;
   transform: translateY(140px);
+  visibility: visible;
   background-color: #000;
   z-index: 999;
   left: 0;
   height: 200px;
   width: 100%;
   display: flex;
-  flex-direction: column;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
@@ -176,6 +182,7 @@ nav ul li .active {
   .menu {
     transform: translateY(-200px);
     transition: transform 0.5s;
+    visibility: hidden;
   }
   .menu nav ul {
     flex-direction: column;
@@ -736,6 +743,9 @@ nav ul li .active {
   font-size: 32px;
   line-height: 38px;
   text-align: start;
+  font-family: "Lato";
+  font-style: normal;
+  color: #fff;
 }
 @media only screen and (max-width: 1300px) {
   .subscriptions .container h2 {
@@ -932,11 +942,14 @@ nav ul li .active {
   margin-top: 20px;
 }
 .film_list-title h2 {
-  font-family: "Lato";
-  font-style: normal;
+  margin-bottom: 24px;
   font-weight: 900;
   font-size: 32px;
   line-height: 38px;
+  text-align: start;
+  font-family: "Lato";
+  font-style: normal;
+  color: #fff;
 }
 @media only screen and (max-width: 767px) {
   .film_list-title h2 {
@@ -959,7 +972,7 @@ nav ul li .active {
 }
 @media only screen and (max-width: 767px) {
   .cartoons-sec {
-    display: none;
+    margin-top: 15px;
   }
 }
 
@@ -976,6 +989,74 @@ nav ul li .active {
 .film_list .film_card {
   margin-left: 0;
   justify-content: flex-start;
+}
+
+.faq .container .section_title {
+  margin-bottom: 24px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: start;
+  font-family: "Lato";
+  font-style: normal;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .faq .container .section_title {
+    margin: 15px 0 15px 5px;
+  }
+}
+
+details {
+  color: #fff;
+  background: #21212C;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+@media only screen and (max-width: 767px) {
+  details {
+    margin: 5px;
+  }
+}
+details summary {
+  background: #1B1B24;
+  border-radius: 6px;
+  min-height: 52px;
+  text-align: start;
+  line-height: 3;
+  padding: 0 24px;
+  position: relative;
+}
+details summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+  color: #9E00FF;
+}
+details summary::marker {
+  font-size: 0;
+}
+details div {
+  min-height: 52px;
+  text-align: start;
+  line-height: 21px;
+  padding: 14px 24px;
+  color: #B7B6DE;
+  border-radius: 0px 0px 6px 6px;
+}
+
+details[open] summary {
+  border-radius: 6px 6px 0px 0px;
+}
+details[open] summary::after {
+  content: "−";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-50%, -50%);
 }
 
 .modal {

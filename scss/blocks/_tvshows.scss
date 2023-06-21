@@ -24,11 +24,7 @@
 	margin-top: 20px;
 
 	h2 {
-		font-family: 'Lato';
-		font-style: normal;
-		font-weight: 900;
-		font-size: 32px;
-		line-height: 38px;
+		@include sectionTitle;
 		@media only screen and (max-width: 767px) {
 			font-size: 24px;
 			line-height: 29px;
@@ -47,7 +43,7 @@
 .cartoons-sec {
 	margin-top: 46px;
 	@media only screen and (max-width: 767px) {
-		display: none;
+		margin-top: 15px;
 	}
 }
 

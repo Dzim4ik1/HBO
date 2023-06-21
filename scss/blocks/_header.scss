@@ -78,13 +78,13 @@ nav {
 		&.active {
 			position: fixed;	
 			transform: translateY(140px);
+			visibility: visible;
 			background-color: $black;
 			z-index: 999;
 			left: 0;
 			height: 200px;
 			width: 100%;
 			display: flex;
-    	flex-direction: column;
     	flex-direction: column;
     	align-items: flex-start;
     	justify-content: space-around;
@@ -95,7 +95,8 @@ nav {
 		}
 		@media only screen and (max-width:767px) {
 			transform: translateY(-200px);
-			transition: transform 0.5s; 
+			transition: transform  0.5s; 
+			visibility: hidden;
 			nav {
 				ul {
 					flex-direction: column;
