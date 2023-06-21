@@ -10,9 +10,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media only screen and (max-width:1300px) {
+			.logo {
+				margin-left: 20px;
+			}
+		
+		}
 
 		@media only screen and (max-width: 1300px) {
-			padding: 0 30px;
+			padding-right: 30px;
 		}
 		@media only screen and (max-width: 900px) {
 			padding: 0;
@@ -30,8 +36,12 @@ nav {
 		display: flex;
 		gap: 50px;
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1200px) {
 			gap: 0 15px;
+
+		}
+		@media only screen and (max-width: 900px) {
+			gap: 0 10px;
 
 		}
 
@@ -74,20 +84,19 @@ nav {
     width: 70%;
     justify-content: space-between;
 		
-		
 		&.active {
 			position: fixed;	
-			transform: translateY(140px);
+			transform: translateY(163px);
 			visibility: visible;
 			background-color: $black;
 			z-index: 999;
 			left: 0;
-			height: 200px;
+			min-height: 242px;
 			width: 100%;
 			display: flex;
     	flex-direction: column;
     	align-items: flex-start;
-    	justify-content: space-around;
+    	justify-content: space-evenly;
     	padding: 0 30px;
 			@media only screen and (min-width:768px) {
 				overflow: hidden;
@@ -101,9 +110,13 @@ nav {
 				ul {
 					flex-direction: column;
 					li {
-						margin-bottom: 8px;
+						&:not(:last-child){
+							margin-bottom: 8px;
+						}
+						
 						a {
 							font-size: 24px;
+							font-weight: 900;
 							
 						}
 					}
@@ -116,6 +129,7 @@ nav {
 
 .burger-menu {
 	display: none;
+	cursor: pointer;
 	@media only screen and (max-width:767px) {
 		display: block;
 		position: fixed;

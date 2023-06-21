@@ -4,26 +4,17 @@ import { data  } from "./data.js";
 const checkbox = document.querySelector(".custom-checkbox");
 
 checkbox.addEventListener("click", function () {
-  if (checkbox.classList.contains("checked")) {
-    checkbox.classList.remove("checked");
-  } else {
-    checkbox.classList.add("checked");
-  }
+	checkbox.classList.toggle("checked")
 });
 
 // Scroll to Top
 const scrollBtn = document.querySelector(".scrolltoTop");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 335) {
-    scrollBtn.classList.add("active");
-  } else {
-    scrollBtn.classList.remove("active");
-  }
+	scrollBtn.classList.toggle("active", window.scrollY > 335)
 });
 
-scrollBtn.addEventListener("click", (e) => {
-	e.preventDefault();
+scrollBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -36,12 +27,12 @@ const closeModal = document.querySelector(".close-modal");
 const modal = document.querySelector(".modal");
 const signUp = document.querySelector(".sign_btn");
 
-signUp.addEventListener("click", (e) => {
-  e.preventDefault;
+
+signUp.addEventListener("click", () => {
   modal.style.visibility = "visible";
 });
 
-closeModal.addEventListener("click", (e) => {
+closeModal.addEventListener("click", () => {
   modal.style.visibility = "hidden";
 });
 
@@ -51,12 +42,10 @@ const burgerMenu = document.querySelector(".burger-menu");
 const menu = document.querySelector(".menu");
 
 burgerMenu.addEventListener("click", () => {
-  menu.classList.contains("active")
-    ? menu.classList.remove("active")
-    : menu.classList.add("active");
+  menu.classList.toggle("active")
 });
 
-window.addEventListener("resize", (e) => {
+window.addEventListener("resize", () => {
   if (window.matchMedia(`(min-width: 768px)`).matches) {
     menu.classList.remove("active");
   }
@@ -64,7 +53,7 @@ window.addEventListener("resize", (e) => {
 
 // slider Hero section
 
-function filmSlider() {
+const filmSlider = () => {
   const filmTitle = document.querySelector(".film-title");
   const filmImg = document.querySelector(".hero .container");
 
@@ -85,19 +74,18 @@ filmSlider();
 const links = document.querySelectorAll(".link");
 
 const handlelink = (e) => {
-  e.preventDefault();
-
   const { currentTarget } = e;
-
   const href = currentTarget.getAttribute("href");
 
-  if (!href) return;
+  if (!href || !href.startsWith('#')|| href.length < 2) return;
+
+	e.preventDefault();
 
   const element = document.querySelector(href);
 
   if (!element) return;
 
-  const top = element.offsetTop;
+  const top = element.offsetTop + element.offsetHeight;
 
   window.scrollTo({ behavior: "smooth", top });
 };
@@ -111,10 +99,7 @@ links.forEach((link) => {
 
 
 
-const getMovieType = (arr, type) => {
-	const typeMovie = arr.filter(movie => movie.type === type);
-	return typeMovie;
-}
+const getMovieType = (arr, type) => arr.filter(movie => movie.type === type);
 
 
 const getTemplate = (arr) => {
@@ -148,9 +133,9 @@ const getTemplate = (arr) => {
 										</div>
 									</div>
 			`
-			element.type === 'movie' ? filmListMovie.insertAdjacentHTML('beforeend', showItem) : false
-		  element.type === 'show' ? filmListshow.insertAdjacentHTML('beforeend', showItem) : false
-			element.type === 'cartoon' ? filmListCartoon.insertAdjacentHTML('beforeend', showItem) : false
+			element.type === 'movie' && filmListMovie.insertAdjacentHTML('beforeend', showItem)
+		  element.type === 'show' && filmListshow.insertAdjacentHTML('beforeend', showItem) 
+			element.type === 'cartoon' && filmListCartoon.insertAdjacentHTML('beforeend', showItem) 
 		
 })	
 }
