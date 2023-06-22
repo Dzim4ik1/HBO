@@ -50,6 +50,12 @@ h1, h2, h3, h4, h5 {
   line-height: 18px;
   cursor: pointer;
 }
+@media only screen and (max-width: 767px) {
+  .sign_btn {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+}
 .sign_btn:hover {
   background-color: #E3B100;
   transition: all 1.2s;
@@ -102,8 +108,13 @@ h1, h2, h3, h4, h5 {
   justify-content: space-between;
 }
 @media only screen and (max-width: 1300px) {
+  .header .container .logo {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 1300px) {
   .header .container {
-    padding: 0 30px;
+    padding-right: 30px;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -120,9 +131,14 @@ nav ul {
   display: flex;
   gap: 50px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   nav ul {
     gap: 0 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  nav ul {
+    gap: 0 10px;
   }
 }
 @media only screen and (max-width: 660px) {
@@ -154,17 +170,17 @@ nav ul li .active {
 }
 .menu.active {
   position: fixed;
-  transform: translateY(140px);
+  transform: translateY(163px);
+  visibility: visible;
   background-color: #000;
   z-index: 999;
   left: 0;
-  height: 200px;
+  min-height: 242px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 0 30px;
 }
 @media only screen and (min-width: 768px) {
@@ -176,20 +192,23 @@ nav ul li .active {
   .menu {
     transform: translateY(-200px);
     transition: transform 0.5s;
+    visibility: hidden;
   }
   .menu nav ul {
     flex-direction: column;
   }
-  .menu nav ul li {
+  .menu nav ul li:not(:last-child) {
     margin-bottom: 8px;
   }
   .menu nav ul li a {
     font-size: 24px;
+    font-weight: 900;
   }
 }
 
 .burger-menu {
   display: none;
+  cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
   .burger-menu {
@@ -250,7 +269,7 @@ nav ul li .active {
   position: absolute;
   top: 0;
   left: 0;
-  animation: loadingSlider 12s infinite;
+  animation: loadingSlider linear 12s infinite;
 }
 @media only screen and (max-width: 1024px) {
   .hero .container .info_loading {
@@ -363,10 +382,22 @@ nav ul li .active {
   margin-right: 24px;
   position: relative;
 }
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card {
+    height: 210px;
+    width: 147px;
+  }
+}
 .film_list .film_card .card-img {
   border-radius: 12px;
   width: 210px;
   height: 300px;
+}
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card-img {
+    height: 210px;
+    width: 147px;
+  }
 }
 .film_list .film_card .card_info {
   width: 210px;
@@ -379,6 +410,13 @@ nav ul li .active {
   position: absolute;
   top: 0;
   padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card_info {
+    height: 210px;
+    width: 147px;
+    padding: 8px;
+  }
 }
 .film_list .film_card .card_info-header {
   display: flex;
@@ -411,6 +449,11 @@ nav ul li .active {
   transform: translate(-50%, -50%);
   width: 170px;
 }
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card_info-main {
+    width: 132px;
+  }
+}
 .film_list .film_card .card_info-main h2 {
   font-style: normal;
   font-weight: 500;
@@ -426,6 +469,12 @@ nav ul li .active {
   color: #fff;
   margin-bottom: 6px;
 }
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card_info-main h1 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .film_list .film_card .card_info-main p {
   font-weight: 400;
   font-size: 11px;
@@ -437,15 +486,32 @@ nav ul li .active {
   width: 100%;
   max-height: 65px;
 }
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card_info-main p {
+    font-size: 9px;
+    max-height: 55px;
+  }
+}
 .film_list .film_card .card_info-main p::after {
   content: "...";
   position: absolute;
   right: 0px;
   top: 4.7em;
 }
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card_info-main p::after {
+    top: 4.3em;
+  }
+}
 .film_list .film_card .card_info-footer {
   position: absolute;
   bottom: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card_info-footer {
+    bottom: 8px;
+    width: inherit;
+  }
 }
 .film_list .film_card .card_info-footer .btn-watch {
   width: 170px;
@@ -457,6 +523,11 @@ nav ul li .active {
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .film_list .film_card .card_info-footer .btn-watch {
+    width: 131px;
+  }
 }
 .film_list .film_card .card_info-footer .btn-watch img {
   border-radius: 0;
@@ -736,6 +807,9 @@ nav ul li .active {
   font-size: 32px;
   line-height: 38px;
   text-align: start;
+  font-family: "Lato";
+  font-style: normal;
+  color: #fff;
 }
 @media only screen and (max-width: 1300px) {
   .subscriptions .container h2 {
@@ -932,11 +1006,14 @@ nav ul li .active {
   margin-top: 20px;
 }
 .film_list-title h2 {
-  font-family: "Lato";
-  font-style: normal;
+  margin-bottom: 24px;
   font-weight: 900;
   font-size: 32px;
   line-height: 38px;
+  text-align: start;
+  font-family: "Lato";
+  font-style: normal;
+  color: #fff;
 }
 @media only screen and (max-width: 767px) {
   .film_list-title h2 {
@@ -959,7 +1036,7 @@ nav ul li .active {
 }
 @media only screen and (max-width: 767px) {
   .cartoons-sec {
-    display: none;
+    margin-top: 15px;
   }
 }
 
@@ -978,6 +1055,108 @@ nav ul li .active {
   justify-content: flex-start;
 }
 
+.faq {
+  margin-bottom: 52px;
+}
+.faq .container .section_title {
+  margin-bottom: 24px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: start;
+  font-family: "Lato";
+  font-style: normal;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .faq .container .section_title {
+    margin: 15px 0 15px 5px;
+  }
+}
+
+details {
+  color: #fff;
+  background: #21212C;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+@media only screen and (max-width: 767px) {
+  details {
+    margin: 5px;
+  }
+}
+details summary {
+  background: #1B1B24;
+  border-radius: 6px;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 24px;
+  position: relative;
+  font-size: 18px;
+}
+@media only screen and (max-width: 426px) {
+  details summary {
+    padding: 0 50px 0 20px;
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+details summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+  color: #9E00FF;
+}
+details summary::marker {
+  font-size: 0;
+}
+details div {
+  min-height: 52px;
+  text-align: start;
+  line-height: 21px;
+  padding: 14px 24px;
+  color: #B7B6DE;
+  border-radius: 0px 0px 6px 6px;
+}
+details div p {
+  font-size: 18px;
+}
+@media only screen and (max-width: 426px) {
+  details div p {
+    font-size: 14px;
+  }
+}
+
+details[open] summary {
+  border-radius: 6px 6px 0px 0px;
+}
+details[open] summary::after {
+  content: "−";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+
+details[open] summary ~ * {
+  animation: open 1s ease-in-out;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    margin-top: -40px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
 .modal {
   visibility: hidden;
   position: fixed;

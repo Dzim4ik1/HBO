@@ -2,6 +2,7 @@
 @import './base/colors';
 @import './base/reset';
 @import './base/base';
+@import './base/mixin';
 
 //Blocks
 @import './blocks/header';
@@ -10,7 +11,8 @@
 @import './blocks/footer';
 @import './blocks/subscriptions';
 @import './blocks/tvshows';
+@import './blocks/faq';
 
 //modal 
-@import './blocks/modal'
+@import './blocks/modal';
 
