@@ -60,9 +60,8 @@ const filmSlider = () => {
   let index = 1;
   setInterval(() => {
     index += 1;
-    if (index === 4) {
-      index = 1;
-    }
+    index > 3 ? index = 1 :  index + 1
+		
     filmImg.style.backgroundImage = `url(./assets/img/Main-slider-img/${index}.png)`;
     filmTitle.src = `./assets/img/Main-slider-img/Group${index}.png`;
   }, 4000);
@@ -139,6 +138,7 @@ const getTemplate = (arr) => {
 		
 })	
 }
+
 
 getTemplate(getMovieType(data, 'show'))
 getTemplate(getMovieType(data, 'cartoon'))
