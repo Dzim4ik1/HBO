@@ -1113,6 +1113,11 @@ details summary::after {
   transform: translate(-50%, -50%);
   color: #9E00FF;
 }
+@media only screen and (max-width: 426px) {
+  details summary::after {
+    right: 10px;
+  }
+}
 details summary::marker {
   font-size: 0;
 }
@@ -1141,6 +1146,11 @@ details[open] summary::after {
   position: absolute;
   top: 50%;
   right: 20px;
+}
+@media only screen and (max-width: 426px) {
+  details[open] summary::after {
+    right: 10px;
+  }
 }
 
 details[open] summary ~ * {
