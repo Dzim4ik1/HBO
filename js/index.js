@@ -95,11 +95,15 @@ links.forEach((link) => {
 
 // get movie info
 
+const moviesType = [];
+const getMoviesType = (data) => {
+	data.forEach(element => {
 
-
-
-const getMovieType = (arr, type) => arr.filter(movie => movie.type === type);
-
+		!moviesType.includes(element.type) ? moviesType.push(element.type) : '';
+		
+	});
+}
+getMoviesType(data)
 
 const getTemplate = (arr) => {
 	const filmListCartoon = document.querySelector('.film_card-cartoons');
@@ -132,6 +136,7 @@ const getTemplate = (arr) => {
 										</div>
 									</div>
 			`
+
 			element.type === 'movie' && filmListMovie.insertAdjacentHTML('beforeend', showItem)
 		  element.type === 'show' && filmListshow.insertAdjacentHTML('beforeend', showItem) 
 			element.type === 'cartoon' && filmListCartoon.insertAdjacentHTML('beforeend', showItem) 
@@ -139,7 +144,7 @@ const getTemplate = (arr) => {
 })	
 }
 
+moviesType.forEach((type)=> {
+	getTemplate(data, type)
+})
 
-getTemplate(getMovieType(data, 'show'))
-getTemplate(getMovieType(data, 'cartoon'))
-getTemplate(getMovieType(data, 'movie'))
