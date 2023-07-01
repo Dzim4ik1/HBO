@@ -85,15 +85,15 @@ nav {
     justify-content: space-between;
 		
 		&.active {
-			position: fixed;	
-			transform: translateY(163px);
-			visibility: visible;
-			background-color: $black;
-			z-index: 999;
-			left: 0;
-			min-height: 242px;
-			width: 100%;
-			display: flex;
+			position: fixed;
+    	transform: translateY(195px);
+    	visibility: visible;
+    	background-color: #000;
+    	z-index: 999;
+    	left: 0;
+    	min-height: 300px;
+    	width: 100%;
+    	display: flex;
     	flex-direction: column;
     	align-items: flex-start;
     	justify-content: space-evenly;

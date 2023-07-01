@@ -95,24 +95,13 @@ links.forEach((link) => {
 
 // get movie info
 
-const moviesType = [];
-const getMoviesType = (data) => {
-	data.forEach(element => {
 
-		!moviesType.includes(element.type) ? moviesType.push(element.type) : '';
-		
-	});
-}
-getMoviesType(data)
+const movieType = data.map(( {type} ) => type);
 
-const getTemplate = (arr) => {
-	const filmListCartoon = document.querySelector('.film_card-cartoons');
-	const filmListMovie = document.querySelector('.film_card-movies');
-	const filmListshow = document.querySelector('.film_card-shows');
+const arrTypes = [... new Set(movieType)];
 
-	arr.forEach(element => {
-		const showItem =
-		`
+const getTemplate = (element) => {
+return `
 									<div class="card">
 									<img class="card-img" src="${element.image}" alt="${element.title}">
 										<div class="card_info">
@@ -136,15 +125,20 @@ const getTemplate = (arr) => {
 										</div>
 									</div>
 			`
-
-			element.type === 'movie' && filmListMovie.insertAdjacentHTML('beforeend', showItem)
-		  element.type === 'show' && filmListshow.insertAdjacentHTML('beforeend', showItem) 
-			element.type === 'cartoon' && filmListCartoon.insertAdjacentHTML('beforeend', showItem) 
-		
-})	
 }
 
-moviesType.forEach((type)=> {
-	getTemplate(data, type)
-})
+const setItemTemplate = (type) => {
+	data.forEach((movie) => {
+			if (movie.type === type) {
+			const element = document.querySelector(`.${type}`);
+			if (!element) return;
+			element.insertAdjacentHTML('beforeend', getTemplate(movie));
+			}
+	})
+}
+
+arrTypes.forEach(setItemTemplate);
+
+//faqs
+
 
