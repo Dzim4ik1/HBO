@@ -140,5 +140,10 @@ const setItemTemplate = (type) => {
 arrTypes.forEach(setItemTemplate);
 
 //faqs
+const faqs = document.querySelectorAll('.faq_item')
 
-
+faqs.forEach((faq)=> {
+	faq.addEventListener('click', ()=>{
+		faq.classList.toggle('open')
+	})
+})

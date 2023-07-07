@@ -1,9 +1,15 @@
 {
+  "name": "hbo",
+  "version": "1.0.0",
+  "description": "Макет - https://www.figma.com/file/rvBRnugexZGgjSv7vqvqNN/HTML%2FCSS?node-id=0%3A1&t=x9Yzx2dPKXrUjGNf-0 GH Pages - https://dzim4ik1.github.io/HBO/",
+  "main": "index.js",
 	"type": "module",
-	"dependencies": {
-		"lodash": "^4.17.21"
-	},
-	"devDependencies": {
-		"@types/lodash": "^4.14.195"
-	}
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitriy Vozhzhov",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
